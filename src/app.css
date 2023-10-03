@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #20283C;
+  --bg-dark: #1b2334;
+  --main-red: #f5547f;
+  --main-blue: #7781ea;
+  --main-cyan: #93f0c8;
+}
+
+@font-face {
+  font-family: 'main';
+  src: url('lib/fonts/coolvetic.otf');
+}
+
+body {
+  background-color: var(--bg);
+  color: white;
+}
+
+h1 {
+  font-family: 'main';
+  font-weight: 800;
+}
