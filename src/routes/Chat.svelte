@@ -1,8 +1,8 @@
 <script>
   import { slide } from "svelte/transition";
   import MessageCard from "./MessageCard.svelte";
+  import { messages, username } from "$lib/store.js";
   import JoinNotification from "./JoinNotification.svelte";
-  import { messages, username, userId } from "$lib/store.js";
 
   export let socket;
 
@@ -33,11 +33,6 @@
   socket.on("new-message", (msg) => {
     $messages.push(msg);
     $messages = $messages;
-  });
-
-  socket.on("get-messages", (msgs) => {
-    $userId = socket.id;
-    $messages = msgs;
   });
 </script>
 
